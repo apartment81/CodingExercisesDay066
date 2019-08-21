@@ -22,10 +22,10 @@ public class RomanNumerals {
         map.put(1, "I");
     }
 
-    private static String toRoman(int number) {
-        int l = map.floorKey(number);
-        if (number == l) return map.get(number);
-        return map.get(l) + toRoman(number - l);
+    private  String toRoman(int number) {
+        int x = map.floorKey(number);
+        if (number == x) return map.get(number);
+        return map.get(x) + toRoman(number - x);
     }
 
     public String solution(int n) {
